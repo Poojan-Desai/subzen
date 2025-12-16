@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SubZen Dashboard</title>
+
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- TOP NAVIGATION -->
+  <nav class="top-nav">
+    <h2 class="logo">SubZen</h2>
+
+    <div class="nav-links">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="history.html">History</a>
+      <a href="pricing.html">Upgrade</a>
+      <a href="settings.html">Settings</a>
+    </div>
+
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </nav>
+
+  <!-- DASHBOARD HEADER -->
+  <header class="dashboard-header">
+    <h1>Your Financial Overview</h1>
+    <p class="subtitle">Track your subscriptions, spending, and savings.</p>
+  </header>
+
+  <!-- MAIN DASHBOARD CONTENT -->
+  <main class="dashboard-container">
+
+    <!-- UPLOAD BOX -->
+    <section class="upload-box">
+      <h3>Upload Your Bank Statement</h3>
+      <p class="upload-subtext">PDF or CSV • No bank login required</p>
+
+      <input type="file" id="fileInput" accept=".pdf,.csv" />
+      <button id="analyzeBtn" class="primary-btn">Analyze Statement</button>
+
+      <p id="uploadStatus" class="status-text"></p>
+    </section>
+
+    <!-- MONTHLY SUMMARY -->
+    <section class="summary-section">
+      <h3>Monthly Summary</h3>
+
+      <div class="summary-cards">
+        <div class="summary-card">
+          <h4>Total Subscription Spend</h4>
+          <p id="totalSubs" class="summary-value">$0</p>
+        </div>
+
+        <div class="summary-card">
+          <h4>Potential Savings</h4>
+          <p id="potentialSavings" class="summary-value">$0</p>
+        </div>
+
+        <div class="summary-card">
+          <h4>Food + Shopping</h4>
+          <p id="foodShopping" class="summary-value">$0</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIPTIONS LIST -->
+    <section class="subscriptions-section">
+      <h3>Your Subscriptions</h3>
+      <div id="subscriptionsList" class="subscriptions-list">
+        <!-- JS loads each subscription here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 SubZen. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT FILES (REQUIRED FOR WORKING BUTTONS) -->
+  <script type="module" src="js/supabaseClient.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>

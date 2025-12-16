@@ -1,0 +1,262 @@
+/* ================================================
+   GLOBAL THEME — DARK NEON (XBOX / GAMEPASS STYLE)
+=================================================*/
+
+:root {
+  --bg-dark: #0d0f17;
+  --card-dark: #141720;
+  --card-light: #1b1f2b;
+  --accent-blue: #4ca4ff;
+  --accent-blue-glow: rgba(76, 164, 255, 0.4);
+  --text-light: #e8ecf1;
+  --text-muted: #9aa3b2;
+  --radius: 14px;
+  --shadow: 0 0 25px rgba(0, 140, 255, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding-bottom: 80px;
+}
+
+/* ================================================
+   NAVBAR
+=================================================*/
+
+.navbar {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(20, 23, 32, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.nav-right a {
+  margin-left: 25px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.nav-right a:hover,
+.nav-right a.active {
+  color: var(--accent-blue);
+}
+
+.logout-btn {
+  margin-left: 25px;
+  padding: 8px 18px;
+  background: var(--accent-blue);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.logout-btn:hover {
+  box-shadow: 0 0 15px var(--accent-blue-glow);
+}
+
+/* ================================================
+   HERO SECTION
+=================================================*/
+
+.hero {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.plan-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 16px;
+  background: var(--card-light);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  border: 1px solid rgba(76, 164, 255, 0.3);
+}
+
+/* ================================================
+   SUMMARY CARDS
+=================================================*/
+
+.summary-grid {
+  width: 92%;
+  margin: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.summary-card {
+  background: var(--card-dark);
+  padding: 22px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: 0.25s;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px var(--accent-blue-glow);
+}
+
+.summary-card .label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.summary-card h3 {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  color: var(--accent-blue);
+}
+
+/* ================================================
+   PIE CHART SECTION
+=================================================*/
+
+.chart-section {
+  width: 92%;
+  margin: 50px auto;
+  padding: 28px;
+  background: var(--card-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.chart-section h2 {
+  margin-bottom: 20px;
+}
+
+/* ================================================
+   UPLOAD SECTION
+=================================================*/
+
+.upload-section {
+  width: 92%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.upload-desc {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.upload-box {
+  background: var(--card-dark);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px dashed rgba(76, 164, 255, 0.4);
+}
+
+.upload-box input {
+  margin-bottom: 12px;
+}
+
+#uploadBtn {
+  padding: 10px 22px;
+  background: var(--accent-blue);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#uploadBtn:hover {
+  box-shadow: 0 0 15px var(--accent-blue-glow);
+}
+
+.upload-status {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--accent-blue);
+}
+
+/* ================================================
+   SUBSCRIPTIONS LIST
+=================================================*/
+
+.subscriptions-section {
+  width: 92%;
+  margin: 50px auto;
+}
+
+.subs-container {
+  margin-top: 20px;
+  display: grid;
+  gap: 18px;
+}
+
+.sub-item {
+  background: var(--card-light);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-item h4 {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.sub-item .price {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+/* ================================================
+   RESPONSIVE
+=================================================*/
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .nav-right a {
+    margin-left: 10px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

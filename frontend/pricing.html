@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SubZen — Pricing</title>
+
+  <link rel="stylesheet" href="css/pricing.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="logo">SubZen</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="auth.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pricing-hero">
+    <h1>Simple, Transparent Pricing</h1>
+    <p>Choose the plan that fits your lifestyle and take control of your money today.</p>
+  </section>
+
+  <!-- PRICING GRID -->
+  <section class="pricing-grid">
+
+    <!-- FREE PLAN -->
+    <div class="plan-card">
+      <h2>Free</h2>
+      <p class="price">$0<span>/month</span></p>
+
+      <ul>
+        <li>✓ Upload statements</li>
+        <li>✓ Basic subscription detection</li>
+        <li>✓ Monthly spending summary</li>
+        <li>— No premium savings insights</li>
+        <li>— No unlimited history</li>
+      </ul>
+
+      <button class="btn-select" onclick="selectPlan('free')">Continue Free</button>
+    </div>
+
+    <!-- PRO PLAN -->
+    <div class="plan-card pro">
+      <div class="badge">Most Popular</div>
+      <h2>Pro</h2>
+      <p class="price">$9.99<span>/month</span></p>
+
+      <ul>
+        <li>✓ Everything in Free</li>
+        <li>✓ Advanced subscription detection</li>
+        <li>✓ Categorized spending charts</li>
+        <li>✓ Smart cancellation suggestions</li>
+        <li>✓ Unlimited uploads</li>
+      </ul>
+
+      <button class="btn-select" onclick="selectPlan('pro')">Upgrade to Pro</button>
+    </div>
+
+    <!-- PREMIUM PLAN -->
+    <div class="plan-card premium">
+      <h2>Premium</h2>
+      <p class="price">$19.99<span>/month</span></p>
+
+      <ul>
+        <li>✓ Everything in Pro</li>
+        <li>✓ Full budgeting automation</li>
+        <li>✓ Savings forecasting</li>
+        <li>✓ Personalized financial suggestions</li>
+        <li>✓ Priority email support</li>
+      </ul>
+
+      <button class="btn-select" onclick="selectPlan('premium')">Go Premium</button>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 SubZen. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/supabaseClient.js"></script>
+
+  <script>
+    function selectPlan(plan) {
+      window.location.href = `auth.html?plan=${plan}`;
+    }
+  </script>
+
+</body>
+</html>

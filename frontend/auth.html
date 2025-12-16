@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In – SubZen</title>
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="logo">SubZen</div>
+  </nav>
+
+  <!-- AUTH WRAPPER -->
+  <div class="auth-container">
+    <div class="auth-box">
+
+      <h2>Welcome Back</h2>
+      <p class="subtext">Sign in to continue tracking your spending.</p>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label>Email</label>
+        <input id="authEmail" type="email" placeholder="you@example.com" />
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label>Password</label>
+        <input id="authPassword" type="password" placeholder="••••••••" />
+      </div>
+
+      <!-- Message Box -->
+      <p id="authMessage"></p>
+
+      <!-- Buttons -->
+      <button id="signInBtn" class="btn-primary">Sign In</button>
+
+      <button id="signUpBtn" class="btn-secondary">Create Account</button>
+
+      <div class="or-line"><span>OR</span></div>
+
+      <!-- Google Login -->
+      <button id="googleBtn" class="btn-google">
+        <img src="https://img.icons8.com/color/24/google-logo.png" />
+        Continue with Google
+      </button>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="js/supabaseClient.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

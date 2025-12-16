@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SubZen — Scan History</title>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page Styles -->
+  <style>
+    .history-container {
+      max-width: 850px;
+      margin: 120px auto 40px;
+      background: #0d1117;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(80,150,255,0.25);
+    }
+
+    h1 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    #emptyState {
+      text-align: center;
+      color: #888;
+      padding: 40px 0;
+      display: none;
+    }
+
+    .history-row {
+      display: grid;
+      grid-template-columns: 1fr 150px 100px;
+      padding: 16px 0;
+      color: white;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .history-row:last-child {
+      border-bottom: none;
+    }
+
+    .file-name {
+      font-weight: bold;
+      color: #4ca4ff;
+    }
+
+    .spend {
+      color: #00e676;
+      font-weight: bold;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      background: #4ca4ff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      display: inline-block;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .back-btn:hover {
+      background: #1f8dff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <header class="top-nav">
+    <div class="logo">SubZen</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="active" href="history.html">History</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </header>
+
+  <!-- MAIN HISTORY SECTION -->
+  <div class="history-container">
+    <h1>Your Scan History</h1>
+
+    <div id="emptyState">You haven't uploaded any statements yet.</div>
+
+    <div id="historyContent"></div>
+
+    <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+  </div>
+
+  <!-- JS FILES -->
+  <script type="module" src="supabaseClient.js"></script>
+  <script type="module" src="history.js"></script>
+
+</body>
+</html>

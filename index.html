@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SubZen — Take Control of Your Money</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Glow Background -->
+  <div class="bg-glow"></div>
+
+  <style>
+    /* -------------------------------------------
+       EXTRA HERO STYLING FOR VERSION B (BIG ENERGY)
+       ------------------------------------------- */
+
+    .hero-container {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5%;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-left {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .hero-left h1 {
+      font-size: 3.3rem;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-left p {
+      color: #9fb4d8;
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+    }
+
+    .hero-cta {
+      margin-top: 10px;
+    }
+
+    .hero-img-card {
+      flex: 1;
+      min-width: 330px;
+      max-width: 500px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 40px #1e6bff55;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .hero-img-card img {
+      width: 100%;
+      border-radius: 12px;
+      opacity: 0.92;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Feature icons */
+    .feature-card img {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 10px;
+      opacity: 0.85;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">SubZen</div>
+    <button onclick="window.location.href='auth.html'">Sign In</button>
+  </nav>
+
+  <!-- HERO SECTION WITH GRAPHIC -->
+  <section class="hero-container">
+
+    <div class="hero-left">
+      <h1>See Where Your Money Really Goes.</h1>
+      <p>SubZen analyzes your bank statements with AI — finding hidden subscriptions, showing where you overspend, and helping you save instantly.</p>
+
+      <button class="cta-btn hero-cta" onclick="window.location.href='auth.html'">
+        Get Started — It's Free
+      </button>
+    </div>
+
+    <div class="hero-img-card">
+      <img src="https://images.unsplash.com/photo-1620316014355-3ca13d1cb651?auto=format&fit=crop&w=1200&q=80"
+           alt="Financial dashboard preview" />
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/4ca4ff/pie-chart.png" />
+      <h3>Smart Subscription Finder</h3>
+      <p>AI detects recurring charges automatically — even ones you forgot about.</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/4ca4ff/money.png" />
+      <h3>Instant Savings Tips</h3>
+      <p>Get personalized suggestions to cancel, downgrade, or negotiate bills.</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/4ca4ff/line-chart.png" />
+      <h3>Spending Insights</h3>
+      <p>Clear breakdowns of food, shopping, entertainment, and hidden drains.</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/4ca4ff/cloud-upload.png" />
+      <h3>No Bank Login Needed</h3>
+      <p>Just upload a PDF or CSV — safe, fast, and private.</p>
+    </div>
+
+  </section>
+  <script type="module" src="js/supabaseClient.js"></script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SubZen. All rights reserved.</p>
+    <div>
+      <a href="privacy.html">Privacy</a> |
+      <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>

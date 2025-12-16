@@ -1,0 +1,198 @@
+/* ===========================================
+   AUTH PAGE STYLING – SubZen (Blue Glow)
+   =========================================== */
+
+:root {
+  --bg: #0d1117;
+  --card-bg: #111827;
+  --border: #1f2937;
+  --text: #e2e8f0;
+  --subtext: #94a3b8;
+  --blue: #4ca4ff;
+  --blue-glow: 0 0 20px rgba(76, 164, 255, 0.45);
+  --radius: 14px;
+  --transition: 0.25s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR ----------------------------------- */
+.nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue);
+  text-shadow: 0 0 12px rgba(76, 164, 255, 0.45);
+}
+
+/* AUTH CONTAINER --------------------------- */
+.auth-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--blue-glow);
+  animation: fadeIn 0.4s ease;
+}
+
+.auth-box h2 {
+  font-size: 26px;
+  margin: 0;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.subtext {
+  color: var(--subtext);
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+
+/* INPUT GROUP ------------------------------ */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--subtext);
+}
+
+.input-group input {
+  background: #0f172a;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: var(--blue-glow);
+}
+
+/* MESSAGE BOX ------------------------------ */
+#authMessage {
+  font-size: 14px;
+  min-height: 18px;
+  margin: 6px 0 16px 0;
+  color: #ff6b6b;
+}
+
+/* BUTTONS ---------------------------------- */
+.btn-primary,
+.btn-secondary,
+.btn-google {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 14px;
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: var(--blue-glow);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: #1e293b;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.btn-google {
+  background: #ffffff;
+  color: #1f2937;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-google:hover {
+  background: #f3f4f6;
+}
+
+/* OR LINE DIVIDER -------------------------- */
+.or-line {
+  text-align: center;
+  margin: 16px 0;
+  color: var(--subtext);
+  font-size: 14px;
+  position: relative;
+}
+
+.or-line span {
+  background: var(--card-bg);
+  padding: 0 10px;
+  position: relative;
+}
+
+.or-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--border);
+  z-index: -1;
+}
+
+/* ANIMATION -------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

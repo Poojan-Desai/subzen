@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SubZen Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/dashboard.css" />
+
+  <!-- Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ========================= NAVBAR ========================= -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1 class="logo">SubZen</h1>
+    </div>
+    <div class="nav-right">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="history.html">History</a>
+      <a href="pricing.html">Upgrade</a>
+      <a href="settings.html">Settings</a>
+      <button id="logoutBtn" class="logout-btn">Log Out</button>
+    </div>
+  </nav>
+
+  <!-- ========================= HERO ========================= -->
+  <header class="hero">
+    <h2 id="welcomeUser">Welcome back 👋</h2>
+    <p class="plan-badge" id="userPlan">FREE PLAN</p>
+  </header>
+
+  <!-- ========================= SUMMARY CARDS ========================= -->
+  <section class="summary-grid">
+    <div class="summary-card">
+      <p class="label">Active Subscriptions</p>
+      <h3 id="activeSubs">0</h3>
+    </div>
+
+    <div class="summary-card">
+      <p class="label">Total Monthly Spend</p>
+      <h3 id="totalSpend">$0</h3>
+    </div>
+
+    <div class="summary-card">
+      <p class="label">Potential Savings</p>
+      <h3 id="potentialSavings">$0</h3>
+    </div>
+
+    <div class="summary-card">
+      <p class="label">Uploads Remaining</p>
+      <h3 id="uploadsLeft">1</h3>
+    </div>
+  </section>
+
+  <!-- ========================= PIE CHART AREA ========================= -->
+  <section class="chart-section">
+    <h2>Spending Breakdown</h2>
+    <canvas id="spendingChart"></canvas>
+  </section>
+
+  <!-- ========================= UPLOAD ZONE ========================= -->
+  <section class="upload-section">
+    <h2>Upload Statement</h2>
+    <p class="upload-desc">Upload a bank statement (PDF or CSV)</p>
+
+    <div class="upload-box">
+      <input type="file" id="fileInput" />
+      <button id="uploadBtn">Analyze Statement</button>
+    </div>
+
+    <p id="uploadStatus" class="upload-status"></p>
+  </section>
+
+  <!-- ========================= SUBSCRIPTIONS LIST ========================= -->
+  <section class="subscriptions-section">
+    <h2>Subscriptions Found</h2>
+    <div id="subsContainer" class="subs-container"></div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="js/supabaseClient.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

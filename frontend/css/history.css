@@ -1,0 +1,170 @@
+/* ============================================================
+   SubZen — History Page Styles
+   Clean, modern, Xbox-inspired dark UI
+============================================================ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: #0b0e11;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+nav {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(20, 25, 31, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav .logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #4ca4ff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d0d0d0;
+  margin-left: 30px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+nav .active {
+  color: #4ca4ff;
+  font-weight: 600;
+}
+
+/* ------------------------------
+   PAGE HEADER
+------------------------------ */
+.page-title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.page-sub {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #9b9fa5;
+}
+
+/* ------------------------------
+   HISTORY LOG CONTAINER
+------------------------------ */
+
+.history-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto 80px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 25px 30px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #9b9fa5;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ------------------------------
+   HISTORY ITEM
+------------------------------ */
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-file {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.history-date {
+  font-size: 14px;
+  color: #9b9fa5;
+}
+
+.history-status {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #4ca4ff;
+}
+
+.history-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4ca4ff;
+}
+
+/* ------------------------------
+   EMPTY STATE
+------------------------------ */
+
+.empty-state {
+  text-align: center;
+  font-size: 18px;
+  color: #9b9fa5;
+  padding: 40px 0;
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE
+------------------------------ */
+@media (max-width: 700px) {
+  .history-container {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .history-header span {
+    font-size: 15px;
+  }
+
+  .history-file {
+    font-size: 15px;
+  }
+
+  .history-date {
+    font-size: 12px;
+  }
+
+  .history-amount {
+    font-size: 16px;
+  }
+}

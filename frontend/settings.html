@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — SubZen</title>
+  <link rel="stylesheet" href="css/settings.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =============== NAVBAR =============== -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <img src="https://img.icons8.com/fluency/48/money.png" class="logo" />
+      <h1>SubZen</h1>
+    </div>
+
+    <div class="nav-right">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="history.html">History</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="settings.html" class="active">Settings</a>
+    </div>
+  </nav>
+
+
+  <!-- =============== MAIN SETTINGS PANEL =============== -->
+  <div class="settings-container">
+
+    <!-- Profile Section -->
+    <section class="settings-card">
+      <h2>Profile</h2>
+      <p id="userEmail" class="user-email">Loading...</p>
+
+      <button id="signOutBtn" class="danger-btn">Sign Out</button>
+    </section>
+
+
+    <!-- Preferences Section -->
+    <section class="settings-card">
+      <h2>Preferences</h2>
+
+      <label class="toggle-row">
+        <span>Dark Mode</span>
+        <input id="darkModeToggle" type="checkbox" />
+      </label>
+
+      <label class="toggle-row">
+        <span>Email Notifications</span>
+        <input id="emailToggle" type="checkbox" />
+      </label>
+    </section>
+
+
+    <!-- Billing Section -->
+    <section class="settings-card">
+      <h2>Billing</h2>
+
+      <div class="billing-info">
+        <p><strong>Current Plan:</strong> <span id="currentPlan">Free</span></p>
+        <button class="blue-btn" onclick="window.location='pricing.html'">Manage Subscription</button>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- Scripts -->
+  <script type="module" src="js/supabaseClient.js"></script>
+  <script type="module" src="js/settings.js"></script>
+
+</body>
+</html>
