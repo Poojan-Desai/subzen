@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
+
 const { analyzeStatement } = require("../controllers/analyzeController");
 
 // Multer config — store file in memory
